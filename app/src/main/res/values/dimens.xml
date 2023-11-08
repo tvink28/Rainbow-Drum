@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size">32sp</dimen>
+    <dimen name="padding_scale">12dp</dimen>
+    <dimen name="big_thumb_radius">12dp</dimen>
+    <dimen name="small_thumb_radius">8dp</dimen>
+    <dimen name="scale_radius">5dp</dimen>
+</resources>

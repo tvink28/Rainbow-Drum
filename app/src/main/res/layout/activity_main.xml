@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <ImageView
+        android:id="@+id/loadImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/rainbowDrum"
+        app:layout_constraintEnd_toStartOf="@id/colorText"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <com.tvink28.rainbowdrum.ColorTextView
+        android:id="@+id/colorText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/loadImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toEndOf="@id/loadImg"
+        app:layout_constraintTop_toTopOf="@id/loadImg"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <com.tvink28.rainbowdrum.RainbowDrumView
+        android:id="@+id/rainbowDrum"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/arrow"
+        app:layout_constraintEnd_toStartOf="@id/seekBar"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loadImg" />
+
+    <com.tvink28.rainbowdrum.VerticalSeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/rainbowDrum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rainbowDrum"
+        app:layout_constraintTop_toTopOf="@id/rainbowDrum"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <com.tvink28.rainbowdrum.ArrowView
+        android:id="@+id/arrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/rainbowDrum"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="@id/rainbowDrum"
+        app:layout_constraintTop_toBottomOf="@id/rainbowDrum" />
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:text="@string/start"
+        android:textColor="@color/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/resetBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/arrow"
+        app:layout_constraintVertical_bias="0.6"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:text="@string/reset"
+        android:textColor="@color/bg"
+        app:layout_constraintBottom_toBottomOf="@id/startBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/startBtn"
+        app:layout_constraintTop_toTopOf="@id/startBtn"
+        app:layout_constraintWidth_percent="0.35" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
